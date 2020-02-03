@@ -75,7 +75,7 @@ export default class UserController {
           ] //We dont want to send the password on response
         }
       );
-      res.send(user);
+      res.send({user});
     } catch (error) {
       res.status(404).send("User not found");
     }
