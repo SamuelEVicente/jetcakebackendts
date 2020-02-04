@@ -27,8 +27,8 @@ const checkJwt = (req: Request, res: Response, next: NextFunction) => {
 
   //token valid for 1hr
   //send a new token on every request
-  const { userId, username } = jwtPayload;
-  const newToken = jwt.sign({ userId, username }, jwtSecret, {
+  const { userId, email } = jwtPayload;
+  const newToken = jwt.sign({ userId, email }, jwtSecret, {
     expiresIn: "1h"
   });
   res.setHeader("token", newToken);

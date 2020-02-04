@@ -75,7 +75,7 @@ export default class UserController {
           ] //We dont want to send the password on response
         }
       );
-      res.send({user});
+      res.send({ user });
     } catch (error) {
       res.status(404).send("User not found");
     }
@@ -105,11 +105,11 @@ export default class UserController {
     user.phone = phone;
     user.address = address;
     user.email = email;
+    user.photoUrl = "url.url";
     user.password = password;
     user.role = role;
     user.securityAnswers = securityAnswers;
     user.securityQuestions = securityQuestions;
-    user.photoUrl = photoUrl;
     user.birth = birth;
 
     //validate parameters of users
